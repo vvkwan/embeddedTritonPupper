@@ -25,8 +25,8 @@ RUN apt update && apt install -y \
     python3-argcomplete \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /embeddedTritonPupper/src
-COPY scriptsW/*.sh /embeddedTritonPupper/src/
+WORKDIR /pupper-embedded/src
+COPY ../scripts/*.sh /pupper-embedded/src/
 
 RUN chmod +x ./*.sh
 RUN ./install_ros2.sh
